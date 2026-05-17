@@ -15,7 +15,7 @@ export const rolePermission = pgTable(
   },
   (table) => [
     index("role_id_index").on(table.roleId),
-    unique().on(table.roleId, table.resource, table.resource),
+    unique().on(table.roleId, table.resource, table.action),
     //We have added a unique clause so that we don't accidentally insert
     //duplicate duplicate permission rows for the same role.
   ],

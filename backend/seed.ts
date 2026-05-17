@@ -1,6 +1,13 @@
 import db from "./src/db/index";
 import { role } from "./src/models/role";
 
+//Might need to add these before seeding. I did these manually when seeding again.
+// DROP TABLE IF EXISTS users CASCADE;
+// DROP TABLE projects CASCADE;
+// DROP TABLE project_members CASCADE;
+// DROP TABLE role CASCADE;
+// DROP TYPE IF EXISTS project_status CASCADE;
+
 async function seed() {
   console.log("SEEEEEEDING!");
   await db.insert(role).values([
