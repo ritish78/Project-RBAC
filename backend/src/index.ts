@@ -1,5 +1,6 @@
 import Fastify, { FastifyReply, FastifyRequest } from "fastify";
 import { SERVER_PORT } from "./config/index.js";
+import db from "../src/db/index.js";
 
 const fastify = Fastify({
   logger: true,
