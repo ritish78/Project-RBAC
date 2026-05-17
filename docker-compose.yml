@@ -1,0 +1,35 @@
+services:
+  rbacpostgresdatabase:
+    container_name: rbacpostgresdatabase
+    image: postgres:18-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: rajeshhamal
+      POSTGRES_PASSWORD: password123
+      POSTGRES_DB: rbac
+      POSTGRES_HOST: postgres
+    ports:
+      - 5432:5432
+    volumes:
+      - rbacdata:/var/lib/postgresql
+    networks:
+      - rbacnetwork
+
+  rbacadminer:
+    container_name: rbacadminer
+    image: adminer:5
+    restart: unless-stopped
+    environment:
+      ADMINER_DEFAULT_SERVER: rbacpostgresdatabase
+    ports:
+      - 8090:8080
+    networks:
+      - rbacnetwork
+    depends_on:
+      - rbacpostgresdatabase
+
+networks:
+  rbacnetwork:
+
+volumes:
+  rbacdata:

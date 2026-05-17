@@ -1,0 +1,31 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "Backend that handles role based authentication.",
+  "main": "src/index.ts",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "migrate:generate": "drizzle-kit generate",
+    "migrate:run": "tsx src/db/migrate.ts",
+    "migrate:push": "drizzle-kit push",
+    "studio": "drizzle-kit studio"
+  },
+  "keywords": [],
+  "author": "Ritish Timalsina",
+  "license": "ISC",
+  "type": "module",
+  "devDependencies": {
+    "@types/node": "^25.8.0",
+    "@types/pg": "^8.20.0",
+    "drizzle-kit": "^0.31.10",
+    "tsc": "^2.0.4",
+    "tsx": "^4.22.0",
+    "typescript": "^6.0.3"
+  },
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "drizzle-orm": "^0.45.2",
+    "fastify": "^5.8.5",
+    "pg": "^8.20.0"
+  }
+}
