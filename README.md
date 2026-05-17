@@ -1,5 +1,6 @@
 # Role Based Access Control:
-<img width="1907" height="850" alt="users, projects and other tables" src="https://github.com/user-attachments/assets/8594554d-d1fc-4a87-bcee-4b1433987c09" />
+<img width="1901" height="834" alt="users, projects and other tables" src="https://github.com/user-attachments/assets/b1b6a767-8993-435d-b37b-481ed0f45979" />
+
 
 Current Implementation:
 1. There are four roles that a user can have for a project:
